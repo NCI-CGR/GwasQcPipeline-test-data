@@ -4,8 +4,8 @@
 # %%
 # Imports
 from collections import defaultdict
-from random import random, seed
 from pathlib import Path
+from random import random, seed
 
 import pysam
 
@@ -68,16 +68,24 @@ for record in vcf.header.records:
 vcf_out_file = Path("../1KG/small_1KG.vcf")
 vcf_out_file.parent.mkdir(exist_ok=True, parents=True)
 
-vcf_out = pysam.VariantFile(vcf_out_file, mode="w", header=vcf_header)
-for chrom, positions in variants.items():
-    print(chrom)
-    for row in vcf.fetch(chrom):
-        if row.start in positions:
-            vcf_out.write(row)
-        elif random() <= 1e-6:
-            # Add random rows for a challenge
-            vcf_out.write(row)
+# %%
+with vcf_out_file.open(mode="w") as f:
+    f.write(str(vcf_header))
+    for chrom, positions in variants.items():
+        if chrom not in vcf_header.contigs.keys():
+            continue
+        print(chrom)
+        for row in vcf.fetch(chrom):
+            if row.start in positions:
+                f.write(str(row))
+            elif random() <= 1e-6:
+                # Add random rows for a challenge
+                f.write(str(row))
+print("done")
 
-vcf_out.close()
+# %% [markdown]
+# ## Compress and index
 
 # %%
+# bcftools view -O z -o ../1KG/small_1KG.vcf.gz -l 9 ../1KG/small_1KG.vcf
+# bcftools index -t ../1KG/small_1KG.vcf.gz
