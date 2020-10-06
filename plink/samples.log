@@ -1,0 +1,18 @@
+PLINK v1.90b6.18 64-bit (16 Jun 2020)
+Options in effect:
+  --map tests/data/plink/samples.map
+  --out tests/data/plink/samples
+  --ped tests/data/plink/samples.ped
+
+Hostname: dataripper
+Working directory: /var/home/fearjm/Projects/GwasQcPipeline
+Start time: Tue Oct  6 14:33:23 2020
+
+Random number seed: 1602009203
+32029 MB RAM detected; reserving 16014 MB for main workspace.
+Scanning .ped file... done.
+Performing single-pass .bed write (602 variants, 10 people).
+--file: tests/data/plink/samples.bed + tests/data/plink/samples.bim +
+tests/data/plink/samples.fam written.
+
+End time: Tue Oct  6 14:33:23 2020
