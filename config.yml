@@ -1,0 +1,7 @@
+project_name: "Test Project"
+sample_sheet: example_sample_sheet.csv
+gtc: "{Sample_ID}.gtc"
+idat: "{Sample_ID}.gtc"
+bpm: "small_manifest.bpm"
+egt: ""
+vcf: "small_1KG.vcf.gz"
