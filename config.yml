@@ -1,7 +1,14 @@
 project_name: "Test Project"
-sample_sheet: example_sample_sheet.csv
-gtc: "{Sample_ID}.gtc"
-idat: "{Sample_ID}.gtc"
-bpm: "small_manifest.bpm"
-egt: ""
-vcf: "small_1KG.vcf.gz"
+
+reference_paths:
+  sample_sheet: example_sample_sheet.csv
+  illumina_array_manifest: small_manifest.bpm
+  # illumina_cluster_file: tests/data/illumina/egt/small.egt
+  thousand_genome_vcf: small_1KG.vcf.gz
+  thousand_genome_tbi: small_1KG.vcf.gz.tbi
+
+user_data_patterns:
+  gtc: "{Sample_Id}.gtc"
+  idat:
+    red: "{Sample_Id}_Red.idat"
+    green: "{Sample_Id}_Grn.idat"
