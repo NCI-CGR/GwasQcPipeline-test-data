@@ -1,12 +1,11 @@
 project_name: "Test Project"
-
+pipeline_version: v0.1.0
+sample_sheet: example_sample_sheet.csv
 reference_paths:
-  sample_sheet: example_sample_sheet.csv
   illumina_array_manifest: small_manifest.bpm
   # illumina_cluster_file: tests/data/illumina/egt/small.egt
   thousand_genome_vcf: small_1KG.vcf.gz
   thousand_genome_tbi: small_1KG.vcf.gz.tbi
-
 user_data_patterns:
   gtc: "{Sample_Id}.gtc"
   idat:
