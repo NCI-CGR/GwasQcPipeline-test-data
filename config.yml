@@ -7,7 +7,7 @@ reference_paths:
   thousand_genome_vcf: small_1KG.vcf.gz
   thousand_genome_tbi: small_1KG.vcf.gz.tbi
 user_data_patterns:
-  gtc: "{Sample_Id}.gtc"
+  gtc: "{Sample_ID}.gtc"
   idat:
-    red: "{Sample_Id}_Red.idat"
-    green: "{Sample_Id}_Grn.idat"
+    red: "{Sample_ID}_Red.idat"
+    green: "{Sample_ID}_Grn.idat"
