@@ -11,3 +11,5 @@ file_patterns:
   idat:
     red: "{Sample_ID}_Red.idat"
     green: "{Sample_ID}_Grn.idat"
+software_params:
+  strand: TOP
