@@ -1,0 +1,5 @@
+#!/bin/bash
+# This is a mock of SGE qsub. It is useful for testing with snakemake.
+cat $1 >> job_script.sh
+echo $RANDOM
+sh $1
