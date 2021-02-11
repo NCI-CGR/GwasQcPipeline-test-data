@@ -1,0 +1,26 @@
+#!/bin/bash
+# A mock version of SGE qacct. Always returns a portion of the `qacct -j
+# {job_id}` output. The most important part is the exit_status of 0.
+
+sleep 2
+job_id=${@: -1}
+
+if [ $job_id -eq 0 ]; then
+    exit_code=1  # this is for testing, if jobID is zero then say it failed.
+else
+    exit_code=0
+fi
+
+echo "
+qname        all.q
+hostname     node005
+owner        test
+project      NONE
+jobname      test_job.a
+jobnumber    ${job_id}
+taskid       undefined
+priority     0
+slots        1
+failed       0
+exit_status  ${exit_code}
+"
