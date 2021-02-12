@@ -9,4 +9,5 @@ echo "job-ID  prior   name       user         state submit/start at     queue   
 000001 0.50038 test_job.a test_user     r     09/29/2020 12:00:00 all.q@node100           1
 000002 0.50038 test_job.b test_user     r     09/29/2020 12:00:00 all.q@node101           1
 000003 0.50038 test_job.c test_user     r     09/29/2020 12:00:00 all.q@node102           1
+000004 0.50038 test_job.d test_user     E     09/29/2020 12:00:00 all.q@node102           1
 "
