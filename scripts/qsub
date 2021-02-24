@@ -2,5 +2,6 @@
 # This is a mock of SGE qsub. It is useful for testing with snakemake.
 code=${@: -1}
 cat $code >> job_script.sh
-echo $RANDOM
-sh $code
+job_id=$RANDOM
+echo $job_id
+sh $code >> logs/test_log.${job_id} 2>&1
