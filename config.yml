@@ -13,7 +13,7 @@ file_patterns:
     green: "{Sample_ID}_Grn.idat"
 software_params:
   strand: TOP
-  samp_cr_1: 0.8
-  snp_cr_1: 0.8
-  samp_cr_2: 0.95
-  snp_cr_2: 0.95
+  sample_call_rate_1: 0.8
+  snp_call_rate_1: 0.8
+  sample_call_rate_2: 0.95
+  snp_call_rate_2: 0.95
