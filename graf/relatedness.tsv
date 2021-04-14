@@ -1,0 +1,33 @@
+# HG match: number of SNPs with matched genotypes when only homozygous SNPs are counted
+# HG miss: number of SNPs with mismatched genotypes when only homozygous SNPs are counted
+# HGMR: Homozygous Genotype Mismatch Rate (%)
+# AG match: number of SNPs with matched genotypes when all SNPs are counted
+# AG miss: number of SNPs with mismatched genotypes when all SNPs are counted
+# AGMR: All Genotype Mismatch Rate (%)
+# Geno rel: relationship determined by sample genotypes. ID = identical subjects or twins; PO = parent-offspring; FS = full sibling; D2 = second degree relative; D3 = third degree relative; UN = unrelated or remotely related subjects
+# Ped rel: Relationship derived from pedigree file. DP = duplicated samples; MT = monozygotic twins; PO = parent-offspring; FS = full sibling; SB = sibling with one parent missing in pedigree; HS = half sibling; GP = grandparent-grandchild; AV = avuncular; HA = half avuncular; FC = first cousin; HC = half first cousin; HF = half sibling + first cousin (half siblings whose fathers or mothers are full siblings)# p_value: Probability that the genetic relationship is NOT the predicted type
+#
+# Expected HGMR and AGMR values (%) for different types of relationships:
+# FS HGMR: 4.9796
+# D2 HGMR: 11.5032
+# D3 HGMR: 17.6069
+# PO AGMR: 40.6049
+# FS AGMR: 34.1190
+# D2 AGMR: 47.9355
+# D3 AGMR: 51.6007
+sample1	sample2	subject1	subject2	sex1	sex2	HG match	HG miss	HGMR	AG match	AG miss	AGMR	geno relation	ped relation	p_value
+SP00002	SP00001	SP00002	SP00001	0	0	1990	0	60.00	3366	0	90.00	UN
+SP00001	SP00003	SP00001	SP00003	0	0	1977	0	25.00	3368	0	41.00	PO
+SP00001	SP00004	SP00001	SP00004	0	0	2027	0	11.60	3364	0	48.00	D2
+SP00001	SP00005	SP00001	SP00005	0	0	2028	0	18.00	3365	0	51.00	D3
+SP00001	SP00006	SP00001	SP00006	0	0	2027	0	60.00	3364	0	90.00	UN
+SP00002	SP00003	SP00001	SP00003	0	0	2033	0	0.00	3370	0	0.00	ID
+SP00002	SP00004	SP00001	SP00004	0	0	2032	0	60.00	3369	0	90.00	UN
+SP00002	SP00005	SP00001	SP00005	0	0	2033	0	60.00	3370	0	90.00	UN
+SP00002	SP00006	SP00001	SP00006	0	0	2035	0	60.00	3368	0	90.00	UN
+SP00003	SP00004	SP00001	SP00004	0	0	2041	0	60.00	3368	0	90.00	UN
+SP00003	SP00005	SP00001	SP00005	0	0	1995	0	60.00	3370	0	90.00	UN
+SP00003	SP00006	SP00001	SP00006	0	0	1992	0	60.00	3371	0	90.00	UN
+SP00004	SP00005	SP00001	SP00005	0	0	2135	0	60.00	3371	0	90.00	UN
+SP00004	SP00006	SP00001	SP00006	0	0	2036	0	60.00	3367	0	90.00	UN
+SP00005	SP00005	SP00001	SP00006	0	0	2010	0	60.00	3368	0	90.00	UN
